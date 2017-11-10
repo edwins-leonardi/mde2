@@ -1,0 +1,36 @@
+swarm:
+  http:
+    port: 8080
+  datasources:
+    jdbc-drivers:
+      org.postgresql:
+        driver-class-name: org.postgresql.Driver
+        xa-datasource-class-name: org.postgresql.xa.PGXADataSource
+        driver-module-name: org.postgresql
+    data-sources:
+      invoiceissuerDS:
+        driver-name: org.postgresql
+        connection-url: jdbc:postgresql://localhost/invoice-issuer
+        user-name: postgres
+        password: any
+        initial-pool-size: 3
+        max-pool-size: 6
+        min-pool-size: 3
+  logging:
+    console-handlers:
+      console:
+        level: DEBUG
+        formatter: "%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%e%n"
+    file-handlers:
+      server:
+        append: true
+        enabled: true
+        encoding: UTF-8
+        level: DEBUG
+        file:
+          path: "server.log"
+    root-logger:
+      handlers:
+        - server
+        - console
+      level: INFO

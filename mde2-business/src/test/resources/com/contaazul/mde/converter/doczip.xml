@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resNFe xmlns="http://www.portalfiscal.inf.br/nfe" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" versao="1.00">
+   <chNFe>42151205442115100168550010003335951000300930</chNFe>
+   <CNPJ>05342115000188</CNPJ>
+   <xNome>AREA42 INC</xNome>
+   <IE>333669906</IE>
+   <dhEmi>2016-12-08T23:00:12-02:00</dhEmi>
+   <tpNF>2</tpNF>
+   <vNF>686.87</vNF>
+   <digVal>LXTpkpa97NBWkKbnks76aBOIOR/4=</digVal>
+   <dhRecbto>2016-12-08T23:09:49-02:00</dhRecbto>
+   <nProt>347160143553302</nProt>
+   <cSitNFe>1</cSitNFe>
+</resNFe>

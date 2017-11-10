@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.contaazul</groupId>
+		<artifactId>mde</artifactId>
+		<version>1.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>mde-jobs-executor</artifactId>
+	<properties>
+		<coverage.line.rate>0.0</coverage.line.rate>
+		<coverage.branch.rate>0.0</coverage.branch.rate>
+		<coverage.missclasses>999999</coverage.missclasses>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>distributed-job-executor</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>aws-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>invoice-issuer-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson</artifactId>
+			<scope>provided</scope>
+			<!-- maybe 3.2.0?? -->
+			<version>2.6.0</version>
+  		</dependency>
+		<dependency>
+			<groupId>com.dripstat</groupId>
+			<artifactId>dripstat-api</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<configuration>
+					<excludes combine.children="append">
+						<exclude>**/*Job.class</exclude>
+						<exclude>**/*Schedule.class</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<configuration>
+					<excludedClasses combine.children="append">
+						<excludedClass>**/*Job.class</excludedClass>
+						<excludedClass>**/*Schedule.class</excludedClass>
+					</excludedClasses>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

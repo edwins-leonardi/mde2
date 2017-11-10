@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.contaazul</groupId>
+	<version>1.2-SNAPSHOT</version>
+	<artifactId>mde2</artifactId>
+	<packaging>pom</packaging>
+	<name>mde2</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<wildfly.swarm.version>2017.11.0</wildfly.swarm.version>
+		<javaee.version>7.0</javaee.version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<lombok.version>1.16.16</lombok.version>
+		<!-->	
+		<prometheus.version>0.0.25</prometheus.version>
+		<axis2.version>1.6.2</axis2.version>
+		-->
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.wildfly.swarm</groupId>
+				<artifactId>bom</artifactId>
+				<version>${wildfly.swarm.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee.version}</version>
+				<scope>provided</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.activation</groupId>
+						<artifactId>activation</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.sun.mail</groupId>
+						<artifactId>javax.mail</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.1-api</artifactId>
+				<version>1.0.0.Final</version>
+				<scope>provided</scope>
+			</dependency>			
+		</dependencies>	
+	</dependencyManagement>
+
+	<modules>
+		<module>mde2-war</module>
+		<module>mde2-resource</module>
+		<module>mde2-entities</module>
+<!--
+		<module>mde2-api</module>
+		<module>mde2-schema</module>
+		<module>mde2-wsdl</module>
+		<module>mde2-aws</module>
+		<module>mde2-business</module>
+		<module>mde2-jobs</module>
+-->
+		<module>mde2-test</module>
+	</modules>
+</project>
