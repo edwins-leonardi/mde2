@@ -34,7 +34,8 @@
 			<groupId>org.wildfly.swarm</groupId>
 			<artifactId>ejb</artifactId>
 		</dependency>
-		<dependency>
+
+<!-- 		<dependency>
 			<groupId>org.wildfly.swarm</groupId>
 			<artifactId>jpa</artifactId>
 		</dependency>
@@ -50,7 +51,7 @@
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.1-api</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<resources>
