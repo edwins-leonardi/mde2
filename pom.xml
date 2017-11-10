@@ -60,7 +60,8 @@
 	<modules>
 		<module>mde2-war</module>
 		<module>mde2-resource</module>
-		<module>mde2-entities</module>
+		<module>mde2-test</module>
+		
 <!--
 		<module>mde2-api</module>
 		<module>mde2-schema</module>
@@ -69,6 +70,5 @@
 		<module>mde2-business</module>
 		<module>mde2-jobs</module>
 -->
-		<module>mde2-test</module>
 	</modules>
 </project>

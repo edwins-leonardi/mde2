@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.contaazul.invoiceissuer.entities.ActionLog;
+import com.gize.swarm.model.Customer;
 
 @Stateless
 public class TestService {
@@ -15,13 +15,13 @@ public class TestService {
 	public String getMessage() {
 		if (manager == null)
 			return "em null";
-		ActionLog l = getLog();
-		return l.getMessage().getText();
+		Customer l = getLog();
+		return l.getName();
 	}
 
-	public ActionLog getLog() {
+	public Customer getLog() {
 
-		return manager.find( ActionLog.class, 70113444l );
+		return manager.find( Customer.class, 1l );
 
 	}
 }
