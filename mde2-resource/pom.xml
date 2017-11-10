@@ -21,7 +21,7 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>mde2-test</artifactId>
+			<artifactId>mde2-buzz</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

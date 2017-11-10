@@ -48,20 +48,15 @@
 				<version>${lombok.version}</version>
 				<scope>provided</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.hibernate.javax.persistence</groupId>
-				<artifactId>hibernate-jpa-2.1-api</artifactId>
-				<version>1.0.0.Final</version>
-				<scope>provided</scope>
-			</dependency>			
 		</dependencies>	
 	</dependencyManagement>
 
 	<modules>
 		<module>mde2-war</module>
 		<module>mde2-resource</module>
-		<module>mde2-test</module>
-		
+		<module>mde2-buzz</module>
+		<module>mde2-entities</module>
+
 <!--
 		<module>mde2-api</module>
 		<module>mde2-schema</module>
@@ -69,6 +64,7 @@
 		<module>mde2-aws</module>
 		<module>mde2-business</module>
 		<module>mde2-jobs</module>
+		<module>mde2-test</module>
 -->
 	</modules>
 </project>

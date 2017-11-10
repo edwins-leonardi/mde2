@@ -4,13 +4,14 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-import br.com.mde.TestService;
+import buzz.MyLogService;
 
 @Path("/test")
 public class TestResource {
 
 	@Inject
-	private TestService service;
+	private MyLogService service;
+	// private TestService service;
 
 	@GET
 	public String run() {

@@ -3,9 +3,9 @@ swarm:
     port: 8080
   datasources:
     data-sources:
-      exampleDS:
+      mdeDS:
         driver-name: postgresql
-        connection-url: jdbc:postgresql://localhost:5432/challenge
+        connection-url: jdbc:postgresql://localhost:5432/invoice-issuer
         user-name: postgres
         password: postgres
         initial-pool-size: 3
